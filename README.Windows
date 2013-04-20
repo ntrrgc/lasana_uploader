@@ -1,0 +1,15 @@
+Tested on Windows 7 & 8.
+
+There is an already built installer for MS Windows in `dist_setup/`.
+
+To build lasana_uploader yourself:
+  python setup.py py2exe
+  
+Installer is created with Inno Setup (`setup.iss`).
+
+Some notes regarding MS Windows packaging:
+
+ * `boot_script.py` needs to be copied into `C:\Python27\Lib\site-packages\py2exe\boot_common.py`. Supposedly this file would be replaceable in the project options, but it does not seem to work.
+    * `boot_script.py` is a patch to make py2exe put log files in the desktop instead of the program directory (which may be read only and hard to find for a user)
+ * You need to copy Qt imageformat plugin dlls into `imageformat/`.
+ * In case you get an error about `msvcp90.dll` missing, place it here.

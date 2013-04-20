@@ -1,0 +1,3 @@
+#!/usr/bin/env python
+import lasana_uploader.lasana
+lasana_uploader.lasana.main()

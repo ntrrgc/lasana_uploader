@@ -1,0 +1,22 @@
+[Desktop Entry]
+Exec=lasana
+GenericName=Upload files to Lasaña
+Type=Application
+Icon=lasana.png
+Name=Lasaña
+NoDisplay=false
+Path[$e]=
+StartupNotify=false
+Terminal=0
+TerminalOptions=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+Actions=SendToLasana
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;image/png;image/jpeg;
+X-KDE-Priority=TopLevel
+
+[Desktop Action SendToLasana]
+Name=Enviar a Lasaña
+Exec=lasana "%f"
+Icon=lasana.png

@@ -1,0 +1,8 @@
+MANIFEST
+build
+msvcp90.dll
+imageformats/*.dll
+archlinux
+*.swp
+*.pyc
+*.pyo
