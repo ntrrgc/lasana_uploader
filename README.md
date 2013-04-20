@@ -1,4 +1,4 @@
-A simple desktop uploader for [Lasaña](http://lasaña.rufian.eu/) 
+A simple desktop uploader for [Lasaña](http://lasana.rufian.eu/) 
 
 You can find the installer for MS Windows in `dist_setup`.
 
