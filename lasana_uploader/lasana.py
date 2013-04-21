@@ -191,6 +191,8 @@ class QUploader(object):
 def main():
     import os
     import sys
+    if os.name == 'nt':
+        from . import win32_unicode_argv
     import argparse
     from PyQt4 import Qt, QtGui
     
@@ -201,6 +203,8 @@ def main():
         import ctypes
         myappid = 'mycompany.myproduct.subproduct.version' # arbitrary string
         ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+        
+        
 
     parser = argparse.ArgumentParser(
             description='Upload files to Lasaña.')
@@ -210,7 +214,13 @@ def main():
     qapp = Qt.QApplication(sys.argv)
 
     if args.filename is not None:
-        filename = args.filename.decode(sys.getfilesystemencoding())
+        # This would be easier in Python 3...
+        if os.name == 'nt':
+            # Already did the trick to convert argv to unicode
+            filename = args.filename
+        else:
+            # Didn't...
+            filename = args.filename.decode(sys.getfilesystemencoding())
     else:
         dialog = QtGui.QFileDialog()
         dialog.setWindowTitle(u"Subir un archivo a Lasaña")

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Lasaña"
-#define MyAppVersion "0.1"
+#define MyAppVersion "0.1-1"
 #define MyAppPublisher "rufian.eu"
 #define MyAppURL "http://lasaña.rufian.eu/"
 #define MyAppExeName "lasana.exe"
@@ -22,7 +22,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={pf}\Lasana
 DefaultGroupName={#MyAppName}
 OutputDir=dist_setup
-OutputBaseFilename=setup
+OutputBaseFilename=lasana-{#MyAppVersion}
 SetupIconFile=lasana_uploader\resources\icon.ico
 Compression=lzma
 SolidCompression=yes

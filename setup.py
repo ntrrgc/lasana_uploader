@@ -41,7 +41,7 @@ def get_data_files():
                 ]
 
 setup(name="lasana_uploader",
-      version="0.1",
+      version="0.1-1",
       description=u"Upload files to Lasaña from your desktop",
       author="Juan Luis Boya",
       author_email="ntrrgc@gmail.com",
@@ -57,7 +57,7 @@ setup(name="lasana_uploader",
           "cssselect > 0.6",
           ],
       scripts=["bin/lasana"],
-      windows=[{"script": "bin/lasana_windows",
+      windows=[{"script": "bin/lasana",
                  "icon_resources": [(1, "lasana_uploader/resources/icon.ico")]}]
               if os.name == 'nt' else [],
       options={
